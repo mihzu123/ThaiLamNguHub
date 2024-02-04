@@ -4796,7 +4796,7 @@ Setting:Line()
 Setting:Button("Sao Chép Link Ảnh Chim Thái Lâm",function()
  
  setclipboard("https://upload.wikimedia.org/wikipedia/vi/thumb/9/9e/DuongVatNguoi.JPG/1920px-DuongVatNguoi.JPG")
-  DiscordLib:Notification("Thông Báo" , "Đã Sao Chép Link Ảnh Chim Thái Lâm" , 10 ,11816162894 )
+  DiscordLib:Notification("Thông Báo" , "Đã Sao Chép Link Ảnh Chim Thái Lâm" , 10 ,16240183137 )
  end)
 
 Setting:Seperator(" Setting ")
