@@ -551,8 +551,8 @@ local NotiFrame = Instance.new("Frame")
 		end
 		)
 	end 
-	DiscordLib:Notification("Thông Báo" , "Thái Lâm Chim Cong" , 6 ,11816162894 )
-	DiscordLib:Notification("Thông Báo" , "Xem Chim Thái Lâm Ở Phần Setting" , 6 ,11816162894 )
+	DiscordLib:Notification("Thông Báo" , "Thái Lâm Chim Cong" , 30 ,11816162894 )
+	DiscordLib:Notification("Thông Báo" , "Xem Chim Thái Lâm Ở Phần Setting" , 30 ,11816162894 )
  local UserInputService = game:GetService("UserInputService")
  local TweenService = game:GetService("TweenService")
  
