@@ -4311,7 +4311,7 @@ end)
 
  
 --------------------------------------------------------------------
-local Library = Update:Window("ThaiLamNguHub","")
+local Library = Update:Window("ThaiLamChimCong","")
 ------------------------------------------
 
 spawn(function()
