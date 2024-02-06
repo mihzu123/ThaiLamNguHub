@@ -2678,7 +2678,7 @@ M:AddDropdown({
     end    
 })
 
-local SpeedAttackList = {"Attack Safe","0","0.1","0.15","0.175"}
+local SpeedAttackList = {"Attack Safe","0","0.1","0.15","0.175",}
 _G.SelectSpeedAttack = ""
 M:AddDropdown({
     Name = "Select Speed Attack",
@@ -2691,6 +2691,21 @@ M:AddDropdown({
     end    
 })
 
+DropdownDelayAttack:SetValue("Fast Attack")
+DropdownDelayAttack:OnChanged(function(Value)
+_G.AttackDelay = Value
+if _G.AttackDelay = "Attack Safe" then
+    _G.Fast_Delay = 0.10
+elseif _G.AttackDelay = "0" then
+    _G.Fast_Delay = 0
+elseif _G.AttackDelay = "0.1" then
+    _G.Fast_Delay = 0.1
+elseif _G.AttackDelay = "0.15" then
+    _G.Fast_Delay = 0.15
+elseif _G.AttackDelay = "0.175" then
+    _G.Fast_Delay = 0.175
+end
+end)
 
 M:AddToggle({
     Name = "Auto Haki Observation",
