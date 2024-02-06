@@ -2836,7 +2836,16 @@ ToggleFarm = F:AddToggle({
     end    
 })
 
-
+    M:AddToggle({
+        Name = "Auto Haki Observation",
+        Default = false,
+        Flag = "Observation Haki",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoObservation = Value
+            StopTween(_G.AutoObservation)
+        end    
+    })
 
 M:AddParagraph("Kitsune✨","Kitsune Island")
 
@@ -3815,16 +3824,7 @@ end)
         Name = "Observation Haki"
     })
 
-    M:AddToggle({
-        Name = "Auto Haki Observation",
-        Default = false,
-        Flag = "Observation Haki",
-        Save = true,
-        Callback = function(Value)
-            _G.AutoObservation = Value
-            StopTween(_G.AutoObservation)
-        end    
-    })
+
     
     M:AddToggle({
         Name = "Cày Điểm Haki Quan Sát Đổi Sv",
