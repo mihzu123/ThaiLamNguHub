@@ -2500,19 +2500,19 @@ local M = Window:MakeTab({
 })
 
 local ST = Window:MakeTab({
-    Name = "Cài đặt",
+    Name = "Setting",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
-    Name = "Vật phẩm",
+    Name = "Items",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
-    Name = "chri số",
+    Name = "Stat",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2524,13 +2524,13 @@ local E = Window:MakeTab({
 })
 
 local RA = Window:MakeTab({
-    Name = "tập kích",
+    Name = "Raid And DF",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
-    Name = "người chơi",
+    Name = "Local Player",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2542,7 +2542,7 @@ local Wld = Window:MakeTab({
 })
 
 local SV = Window:MakeTab({
-    Name = "Thông tin server",
+    Name = "Status And Sever",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2554,19 +2554,19 @@ local D = Window:MakeTab({
 })
 
 local R = Window:MakeTab({
-    Name = "Tộc V4",
+    Name = "Race",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "cửa hàng",
+    Name = "Shop",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "khác",
+    Name = "Misc",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
