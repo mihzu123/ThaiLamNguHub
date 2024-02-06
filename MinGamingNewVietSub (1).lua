@@ -2505,6 +2505,12 @@ local M = Window:MakeTab({
     PremiumOnly = false
 })
 
+local F = Window:MakeTab({
+    Name = "Farm",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
 local C = Window:MakeTab({
     Name = "Misc",
     Icon = "rbxassetid://4483345998",
@@ -2665,7 +2671,7 @@ M:AddParagraph("Select Weapon","Please Select Weapon")
 
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
-M:AddDropdown({
+F:AddDropdown({
     Name = "Chọn vũ khí",
     Default = "",
     Options = WeaponList,
@@ -2823,7 +2829,6 @@ end
         Name = "Tự động Farm Level"
     })
 
-M:AddParagraph("Main Farm","")
 
 ToggleFarm = M:AddToggle({
     Name = "Cày cấp",
@@ -3308,8 +3313,8 @@ local Section = M:AddSection({
     Name = "Fast Attack :"
 })
 
-M:AddToggle({
-    Name = "Đánh Nhanh",
+F:AddToggle({
+    Name = "Fast Attack",
     Default = true,
     Flag = "FastAttack",
     Save = false,
