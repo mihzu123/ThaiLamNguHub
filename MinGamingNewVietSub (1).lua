@@ -3021,7 +3021,7 @@ SH:AddButton({
 
 
 ToggleFarm = F:AddToggle({
-    Name = "Farm ",
+    Name = "Farm Level ",
     Default = false,
     Flag = "Farm",
     Save = true,
