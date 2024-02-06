@@ -2691,6 +2691,69 @@ M:AddDropdown({
     end    
 })
 M:AddToggle({
+    Name = "Fast Attack",
+    Default = false,
+    Flag = "FastAttack",
+    Save = false,
+    Callback = function(Value)
+        _G.FastAttack = Value
+    end    
+})
+local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
+CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+y = debug.getupvalues(CombatFrameworkR)[2]
+spawn(function()
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if _G.FastAttack then
+            if typeof(y) == "table" then
+                pcall(function()
+                    CameraShaker:Stop()
+                    y.activeController.timeToNextAttack = (math.huge^math.huge^math.huge)
+                    y.activeController.timeToNextAttack = 0
+                    y.activeController.hitboxMagnitude = 60
+                    y.activeController.active = false
+                    y.activeController.timeToNextBlock = 0
+                    y.activeController.focusStart = 1655503339.0980349
+                    y.activeController.increment = 1
+                    y.activeController.blocking = false
+                    y.activeController.attacking = false
+                    y.activeController.humanoid.AutoRotate = true
+                end)
+            end
+        end
+    end)
+end)
+spawn(function()
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if _G.FastAttack == true then
+            game.Players.LocalPlayer.Character.Stun.Value = 0
+            game.Players.LocalPlayer.Character.Busy.Value = false        
+        end
+    end)
+end)
+
+    _G.FastAttackDelay = 0.1
+    M:AddToggle({
+        Name = "Auto Buso",
+        Default = true,
+        Callback = function(Value)
+            _G.AUTOHAKI = Value
+        end    
+    })
+    spawn(function()
+        while wait(.1) do
+            if _G.AUTOHAKI then 
+                if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                    local args = {
+                        [1] = "Buso"
+                    }
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+                end
+            end
+        end
+    end)
+           
+M:AddToggle({
     Name = "Auto Haki Observation",
     Default = false,
     Flag = "Observation Haki",
@@ -3499,54 +3562,7 @@ spawn(function()
     end
 end)
 
-local Section = M:AddSection({
-    Name = "Fast Attack"
-})
 
-M:AddToggle({
-    Name = "Fast Attack",
-    Default = false,
-    Flag = "FastAttack",
-    Save = false,
-    Callback = function(Value)
-        _G.FastAttack = Value
-    end    
-})
-local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
-CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-y = debug.getupvalues(CombatFrameworkR)[2]
-spawn(function()
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if _G.FastAttack then
-            if typeof(y) == "table" then
-                pcall(function()
-                    CameraShaker:Stop()
-                    y.activeController.timeToNextAttack = (math.huge^math.huge^math.huge)
-                    y.activeController.timeToNextAttack = 0
-                    y.activeController.hitboxMagnitude = 60
-                    y.activeController.active = false
-                    y.activeController.timeToNextBlock = 0
-                    y.activeController.focusStart = 1655503339.0980349
-                    y.activeController.increment = 1
-                    y.activeController.blocking = false
-                    y.activeController.attacking = false
-                    y.activeController.humanoid.AutoRotate = true
-                end)
-            end
-        end
-    end)
-end)
-spawn(function()
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if _G.FastAttack == true then
-            game.Players.LocalPlayer.Character.Stun.Value = 0
-            game.Players.LocalPlayer.Character.Busy.Value = false        
-        end
-    end)
-end)
-
-    _G.FastAttackDelay = 0.1
-           
 local Section = M:AddSection({
     Name = "Bypass Teleport"
 })
@@ -4078,25 +4094,6 @@ end)
         end    
     })
 
-    M:AddToggle({
-        Name = "Auto Buso",
-        Default = true,
-        Callback = function(Value)
-            _G.AUTOHAKI = Value
-        end    
-    })
-    spawn(function()
-        while wait(.1) do
-            if _G.AUTOHAKI then 
-                if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-                    local args = {
-                        [1] = "Buso"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                end
-            end
-        end
-    end)
 
     ST:AddToggle({
         Name = "Tránh văng",
