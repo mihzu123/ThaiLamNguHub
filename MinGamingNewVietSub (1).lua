@@ -2690,7 +2690,6 @@ M:AddDropdown({
         _G.Attackdelay = Value
     end    
 })
-
 M:AddToggle({
     Name = "Auto Haki Observation",
     Default = false,
