@@ -2853,7 +2853,7 @@ SH:AddButton({
 })
 
 local Section = SH:AddSection({
-	Name = "Fighting Shop"
+	Name = "Fighting Shop",
 })
 
 SH:AddButton({
