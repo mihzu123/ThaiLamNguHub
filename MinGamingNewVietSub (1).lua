@@ -3505,7 +3505,7 @@ local Section = M:AddSection({
 
 M:AddToggle({
     Name = "Fast Attack",
-    Default = true,
+    Default = false,
     Flag = "FastAttack",
     Save = false,
     Callback = function(Value)
@@ -3545,7 +3545,7 @@ spawn(function()
     end)
 end)
 
-    _G.FastAttackDelay = 0.2
+    _G.FastAttackDelay = 0.1
            
 local Section = M:AddSection({
     Name = "Bypass Teleport"
