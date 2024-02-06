@@ -4,8 +4,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Fai Fao Hub",
-    SubTitle = "Version 2",
+    Title = "NitroZ Hub-Blox Fruit",
+    SubTitle = "by mnghia",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
@@ -13,17 +13,20 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "home" }),
-    Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
-    Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
-    Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
-    Teleport = Window:AddTab({ Title = "Island", Icon = "palmtree" }),
-    Fruit = Window:AddTab({ Title = "Fruit", Icon = "cherry" }),
-    Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
-    Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
-	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
-    Hop = Window:AddTab({ Title = "Hop", Icon = "wifi" }),
+    Shop = Window:AddTab({ Title = "Tab Shop", Icon = "" }),
+    Setting = Window:AddTab({ Title = "Setting Farm", Icon = "" }),
+    Main = Window:AddTab({ Title = "Tab Farm", Icon = "" }),
+	Misc = Window:AddTab({ Title = "Tab Misc", Icon = "" }),
+    MM = Window:AddTab({ Title = "Tab Material And M,ob", Icon = "" }),
+    Webhook = Window:AddTab({ Title = "Tab Webhook"}),
+    SE = Window:AddTab({ Title = "Tab Sea Event", Icon = "" }),
+    Raid = Window:AddTab({ Title = "Tab Raid And DF", Icon = "" }),
+    Race = Window:AddTab({ Title = "Tab Race", Icon = "" }),
+    SS = Window:AddTab({ Title = "Tab Status And Sever", Icon = "" }),
+    Items = Window:AddTab({ Title = "Tab Items", Icon = "" }),
+    LP = Window:AddTab({ Title = "Tab Local Player", Icon = "" }),
+    PVP = Window:AddTab({ Title = "Tab PVP", Icon = "" }),
+    Setting = Window:AddTab({ Title = "Tab Setting", Icon = "" }),
 }
 local Options = Fluent.Options
 do
