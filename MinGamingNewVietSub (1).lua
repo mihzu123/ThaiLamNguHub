@@ -2678,7 +2678,7 @@ M:AddDropdown({
     end    
 })
 
-local Section = TabSH:AddSection({
+local Section = SH:AddSection({
 	Name = "Fighting Shop"
 })
 
