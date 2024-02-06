@@ -2690,6 +2690,7 @@ M:AddDropdown({
         _G.Attackdelay = Value
     end    
 })
+
 M:AddToggle({
     Name = "Fast Attack",
     Default = false,
@@ -2733,6 +2734,40 @@ spawn(function()
 end)
 
     _G.FastAttackDelay = 0.1
+local SpeedAttackList = {"Attack Safe","0","0.1","0.15","0.175"}
+_G.AttackDelay= "0.15"
+M:AddDropdown({
+    Name = "Select Speed Attack",
+    Default = "0,15",
+    Options = SpeedAttackList,
+    Default = true
+    Flag = "AttackDelay",
+    Save = true,
+    Callback = function(Value)
+        _G.AttackDelay = Value
+    end    
+})
+
+spawn(function()
+    while wait(.1) do
+        if _G.AttackDelay then
+            pcall(function()
+                if _G.AttackDelay == "Attack Safe" then
+                    _G.AttackDelay = 0.5
+                elseif _G.AttackDelay == "0" then
+                    _G.AttackDelay = 0
+                elseif _G.AttackDelay == "0.1" then
+                    _G.AttackDelay = 0.1
+                elseif _G.AttackDelay == "0.15" then
+                    _G.AttackDelay = 0.15
+                elseif _G.AttackDelay == "0.175" then
+                    _G.AttackDelay = 0.175
+                end
+            end)
+        end
+    end
+end)
+
     M:AddToggle({
         Name = "Auto Buso",
         Default = true,
@@ -3567,7 +3602,7 @@ M:AddToggle({
     })
 
 M:AddToggle({
-    Name = "gom quái",
+    Name = "Bring Mob",
     Default = true,
     Flag = "Bring Mobs",
     Save = false,
