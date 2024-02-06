@@ -2527,7 +2527,7 @@ local SE = Window:MakeTab({
     PremiumOnly = false
 })
 
-local RA = Window:MakeTab({
+local RD = Window:MakeTab({
     Name = "Raid And DF",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
@@ -2545,18 +2545,18 @@ local SV = Window:MakeTab({
     PremiumOnly = false
 })
 
-local IQ = Window:MakeTab({
+local IT = Window:MakeTab({
     Name = "Items",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-local LC = Window:MakeTab({
+local LP = Window:MakeTab({
     Name = "Local Player",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
-local W = Window:MakeTab({
+local PVP = Window:MakeTab({
     Name = "PVP",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
@@ -2776,8 +2776,6 @@ end
         Name = "Other Farm"
     })
 
-    M:AddParagraph("Redeem Code","Click to Button to Reddem All Code In Blox Fruits.")
-
     local x2Code = {
         "JULYUPDATE_RESET",
         "staffbattle",
@@ -2809,8 +2807,8 @@ end
     
     
     
-    M:AddButton({
-        Name = "nhập hết code",
+    SH:AddButton({
+        Name = "Redeem Code",
         Callback = function()
             function RedeemCode(value)
                 game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(value)
