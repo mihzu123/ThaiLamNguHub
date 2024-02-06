@@ -2678,6 +2678,11 @@ M:AddDropdown({
     end    
 })
 
+local Section = TabSH:AddSection({
+	Name = "Fighting Shop"
+})
+
+
 M:AddToggle({
     Name = "Auto Haki Observation",
     Default = false,
@@ -2786,9 +2791,7 @@ if World2 and World1 then
     })
 end
 
-    local Section = M:AddSection({
-        Name = "Other Farm"
-    })
+
 
     local x2Code = {
         "JULYUPDATE_RESET",
@@ -2853,6 +2856,159 @@ SH:AddButton({
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
       end    
 })
+
+SH:AddButton({
+    Name = "Black Leg",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
+      end    
+})
+
+SH:AddButton({
+    Name = "FishMan Karate",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
+      end    
+})
+
+SH:AddButton({
+    Name = "Electrol",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
+      end    
+})
+
+SH:AddButton({
+    Name = "Super Human",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
+      end    
+})
+
+SH:AddButton({
+    Name = "Death Step",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
+      end    
+})
+
+SH:AddButton({
+    Name = "Electric Claw",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
+      end    
+})
+
+SH:AddButton({
+    Name = "Sharkman Karate",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
+      end    
+})
+
+SH:AddButton({
+    Name = "Dragon Talon",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
+      end    
+})
+
+SH:AddButton({
+    Name = "God Human",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
+      end    
+})
+
+SH:AddButton({
+    Name = "Sanguine Art",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+      end    
+})
+
+local Section = SH:AddSection({
+	Name = "Abilbies Shop"
+})
+
+SH:AddButton({
+    Name = "Sky Jump[ $10,000 Beli ]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
+      end    
+})
+
+SH:AddButton({
+    Name = "Buso Haki [ $25,000 Beli ]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
+      end    
+})
+
+SH:AddButton({
+    Name = "Observation haki [ $750,000 Beli ]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
+      end    
+})
+
+SH:AddButton({
+    Name = "Soru [ $100,000 Beli ]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
+      end    
+})
+
+local Section = SH:AddSection({
+	Name = "Misc Shop"
+})
+
+SH:AddButton({
+    Name = "Reroll Race",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
+      end    
+})
+
+SH:AddButton({
+    Name = "Reset Stats",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
+      end    
+})
+
+SH:AddButton({
+    Name = "Buy Race Cyborg ",
+    Callback = function()
+        local a = {
+            [1] = "CyborgTrainer",
+            [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(a))
+      end    
+})
+
+SH:AddButton({
+    Name = "Buy Race Ghoul",
+    Callback = function()
+        local a = {
+            [1] = "Ectoplasm",
+            [2] = "BuyCheck",
+            [3] = 4
+        }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(a))
+        local a = {
+            [1] = "Ectoplasm",
+            [2] = "Change",
+            [3] = 4
+        }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(a))
+      end    
+})
+
+
 ToggleFarm = F:AddToggle({
     Name = "Farm ",
     Default = false,
