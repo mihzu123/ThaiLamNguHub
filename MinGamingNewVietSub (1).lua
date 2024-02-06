@@ -2734,7 +2734,7 @@ spawn(function()
 end)
 
     _G.FastAttackDelay = 0.1
-local SpeedAttackList = {"Attack Safe","0","0.1","0.15","0.175"}
+local SpeedAttackList = {"Attack Safe", "0", "0.1", "0.15", "0.175"}
 _G.AttackDelay= "0.15"
 M:AddDropdown({
     Name = "Select Speed Attack",
