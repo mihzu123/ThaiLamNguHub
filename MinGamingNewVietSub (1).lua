@@ -2488,59 +2488,59 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "NitroZ Hub|by mnghiaa", HidePremium = false, IntroText = "Nitroz Library", SaveConfig = true, ConfigFolder = "NitroZ Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
-    Name = "W:Profile",
+    Name = "Profile",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "SH:Shop",
+    Name = "Shop",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
-    Name = "M:Setting Farm",
+    Name = "Setting Farm",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local F = Window:MakeTab({
-    Name = "F:Farm",
+    Name = "Farm",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "C:Misc",
+    Name = "Misc",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local MM = Window:MakeTab({
-    Name = "MM:Material And Mob",
+    Name = "Material And Mob",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local WH = Window:MakeTab({
-    Name = "WH:Webhook",
+    Name = "Webhook",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SE = Window:MakeTab({
-    Name = "SE:Sea Event",
+    Name = "Sea Event",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local RD = Window:MakeTab({
-    Name = "RD:Raid And DF",
+    Name = "Raid And DF",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
-    Name = "R:Race",
+    Name = "Race",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2552,23 +2552,23 @@ local SV = Window:MakeTab({
 })
 
 local IT = Window:MakeTab({
-    Name = "IT:Items",
+    Name = "Items",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local LP = Window:MakeTab({
-    Name = "LP:Local Player",
+    Name = "Local Player",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local PVP = Window:MakeTab({
-    Name = "PVP:PVP",
+    Name = "PVP",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local ST = Window:MakeTab({
-    Name = "ST:Setting",
+    Name = "Setting",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -3279,7 +3279,7 @@ local Bring = {"Low", "Normal", "Super Bring"}
 _G.BringMode = "Normal"
 M:AddDropdown({
     Name = "Bring Mode",
-    Default = "Normal",
+    Default = "Super Bring",
     Options = Bring,
     Default = false,
     Flag = "Bring Mode",
@@ -3305,7 +3305,7 @@ spawn(function()
 end)
 
 local Section = M:AddSection({
-    Name = "Fast Attack :"
+    Name = "Fast Attack"
 })
 
 M:AddToggle({
@@ -3816,9 +3816,9 @@ end)
     })
 
     M:AddToggle({
-        Name = "Cày Điểm Haki Quan Sát",
+        Name = "Auto Haki Observation",
         Default = false,
-        Flag = "Tự động Farm Observation Haki",
+        Flag = "Observation Haki",
         Save = true,
         Callback = function(Value)
             _G.AutoObservation = Value
@@ -3892,8 +3892,8 @@ end)
         end    
     })
 
-    ST:AddToggle({
-        Name = "Tự động Haki",
+    M:AddToggle({
+        Name = "Auto Buso",
         Default = true,
         Callback = function(Value)
             _G.AUTOHAKI = Value
@@ -5476,21 +5476,21 @@ local Section = Wld:AddSection({
     Name = "World Menu"
 })
 
-Wld:AddButton({
+SH:AddButton({
     Name = "Old World",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
       end    
 })
 
-Wld:AddButton({
+SH:AddButton({
     Name = "Second World",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
       end    
 })
 
-Wld:AddButton({
+SH:AddButton({
     Name = "Third World",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
@@ -11272,7 +11272,7 @@ TP1(v.HumanoidRootPart.CFrame * CFrame.new(0,0,3))
 v.HumanoidRootPart.CanCollide = false
 v.HumanoidRootPart.Size = Vector3.new(100, 100, 100)
 Click()
-useskilltrial = true
+useskilltrial = false
 if tostring(game.Players.LocalPlayer.Team) == "Pirates" then
     topos(v.HumanoidRootPart.CFrame * CFrame.new(0,0,3))
             elseif tostring(game.Players.LocalPlayer.Team) == "Marines" then
