@@ -2678,18 +2678,6 @@ M:AddDropdown({
     end    
 })
 
-local SpeedAttackList = {"Attack Safe","0","0.1","0.15","0.175"}
-_G.SelectSpeedAttack = ""
-M:AddDropdown({
-    Name = "Select Speed Attack",
-    Default = "0,15",
-    Options = SpeedAttackList,
-    Flag = "AttackDelay",
-    Save = true,
-    Callback = function(Value)
-        _G.Attackdelay = Value
-    end    
-})
 
 M:AddToggle({
     Name = "Fast Attack",
