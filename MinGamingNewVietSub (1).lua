@@ -2678,11 +2678,6 @@ M:AddDropdown({
     end    
 })
 
-local Section = SH:AddSection({
-	Name = "Fighting Shop"
-})
-
-
 M:AddToggle({
     Name = "Auto Haki Observation",
     Default = false,
@@ -2855,6 +2850,10 @@ SH:AddButton({
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
       end    
+})
+
+local Section = SH:AddSection({
+	Name = "Fighting Shop"
 })
 
 SH:AddButton({
