@@ -1,3 +1,4 @@
+
 local a = "\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\10"
 local b = "\66\97\99\107\117\112\45\83\99\114\105\112\116\47\109\97\105\110\47\83\101\118\101\114\10"
 local a = a .. b
@@ -2664,7 +2665,7 @@ local locallv = W:AddLabel("")
 
 
 
-local WeaponList = {"Melee","Sword","Blox Fruit",}
+local WeaponList = {"Melee","Sword","Blox Fruit"}
 _G.SelectWeapon = "Melee"
 M:AddDropdown({
     Name = "Select Weapon",
@@ -2677,6 +2678,18 @@ M:AddDropdown({
     end    
 })
 
+local SpeedAttackList = {"Attack Safe","0","0.1","0.15","0.175"}
+_G.SelectSpeedAttack = ""
+M:AddDropdown({
+    Name = "Select Speed Attack",
+    Default = "0,15",
+    Options = SpeedAttackList,
+    Flag = "AttackDelay",
+    Save = true,
+    Callback = function(Value)
+        _G.Attackdelay = Value
+    end    
+})
 
 M:AddToggle({
     Name = "Auto Haki Observation",
