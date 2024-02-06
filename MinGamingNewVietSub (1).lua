@@ -2488,87 +2488,87 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "NitroZ Hub|by mnghiaa", HidePremium = false, IntroText = "Nitroz Library", SaveConfig = true, ConfigFolder = "NitroZ Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
-    Name = "Profile",
+    Name = "W:Profile",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "Shop",
+    Name = "SH:Shop",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
-    Name = "Setting Farm",
+    Name = "M:Setting Farm",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local F = Window:MakeTab({
-    Name = "Farm",
+    Name = "F:Farm",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "Misc",
+    Name = "C:Misc",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local MM = Window:MakeTab({
-    Name = "Material And Mob",
+    Name = "MM:Material And Mob",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local WH = Window:MakeTab({
-    Name = "Webhook",
+    Name = "WH:Webhook",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SE = Window:MakeTab({
-    Name = "Sea Event",
+    Name = "SE:Sea Event",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local RD = Window:MakeTab({
-    Name = "Raid And DF",
+    Name = "RD:Raid And DF",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
-    Name = "Race",
+    Name = "R:Race",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
-    Name = "Status And Sever",
+    Name = "SV:Status And Sever",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local IT = Window:MakeTab({
-    Name = "Items",
+    Name = "IT:Items",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local LP = Window:MakeTab({
-    Name = "Local Player",
+    Name = "LP:Local Player",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local PVP = Window:MakeTab({
-    Name = "PVP",
+    Name = "PVP:PVP",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 local ST = Window:MakeTab({
-    Name = "Setting",
+    Name = "ST:Setting",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2824,11 +2824,6 @@ end
             end
           end    
     })
-
-    local Section = M:AddSection({
-        Name = "Tự động Farm Level"
-    })
-
 
 ToggleFarm = F:AddToggle({
     Name = "Farm Level",
@@ -3313,7 +3308,7 @@ local Section = M:AddSection({
     Name = "Fast Attack :"
 })
 
-F:AddToggle({
+M:AddToggle({
     Name = "Fast Attack",
     Default = true,
     Flag = "FastAttack",
