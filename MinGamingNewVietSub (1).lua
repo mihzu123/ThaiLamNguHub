@@ -2690,7 +2690,21 @@ M:AddDropdown({
         _G.Attackdelay = Value
     end    
 })
-
+    DropdownDelayAttack:SetValue("AttackDelay")
+    DropdownDelayAttack:OnChanged(function(Value)
+    _G.FastAttackFaiFao_Mode = Value
+    if _G.AttackDelay == "Attack Safe" then
+        _G.Fast_Delay = 0.10
+    elseif _G.AttackDelay == "0" then
+        _G.Fast_Delay = 0
+    elseif _G.AttackDelay == "0.1" then
+        _G.Fast_Delay = 0.1
+    elseif _G.AttackDelay == "0.15" then
+        _G.Fast_Delay = 0.15
+    elseif _G.AttackDelay == "0.175" then
+        _G.Fast_Delay = 0.175
+    end
+end)
 M:AddToggle({
     Name = "Auto Haki Observation",
     Default = false,
