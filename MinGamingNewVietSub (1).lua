@@ -2740,7 +2740,7 @@ M:AddDropdown({
     Name = "Select Speed Attack",
     Default = "0,15",
     Options = SpeedAttackList,
-    Default = true
+    Default = true,
     Flag = "AttackDelay",
     Save = true,
     Callback = function(Value)
