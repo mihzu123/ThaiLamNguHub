@@ -2672,7 +2672,7 @@ M:AddParagraph("Select Weapon","Please Select Weapon")
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
 F:AddDropdown({
-    Name = "Chọn vũ khí",
+    Name = "Select Weapon",
     Default = "",
     Options = WeaponList,
     Flag = "Select Weapon",
@@ -2830,8 +2830,8 @@ end
     })
 
 
-ToggleFarm = M:AddToggle({
-    Name = "Cày cấp",
+ToggleFarm = F:AddToggle({
+    Name = "Farm Level",
     Default = false,
     Flag = "LevelFarm",
     Save = true,
